@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junnie's World — Quality Male & Female Wears</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<style type="text/css">
+  :root {
+  --wood: #2B1D14;
+  --wood-light: #40291A;
+  --gold: #C9A227;
+  --gold-light: #E4C55E;
+  --sky: #2EA8E0;
+  --cream: #FAF6EF;
+  --charcoal: #241B14;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--charcoal);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+a { text-decoration: none; color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--wood);
+  border-bottom: 2px solid var(--gold);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--wood);
+  background: var(--gold);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: var(--sky);
+  font-weight: 600;
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.main-nav a {
+  color: var(--cream);
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover { color: var(--gold-light); }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--cream);
+}
+
+/* Hero */
+.hero {
+  background:
+    linear-gradient(rgba(20,13,8,0.75), rgba(20,13,8,0.75)),
+    repeating-linear-gradient(100deg, var(--wood) 0px, var(--wood-light) 3px, var(--wood) 6px);
+  color: var(--cream);
+  padding: 110px 24px 90px;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  color: var(--gold-light);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.hero-sub {
+  max-width: 480px;
+  margin: 0 auto 34px;
+  color: #E9DFCE;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.15s, background 0.2s;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--wood);
+}
+
+.btn-gold:hover { background: var(--gold-light); }
+
+.btn-outline {
+  border: 1.5px solid var(--sky);
+  color: var(--sky);
+}
+
+.btn-outline:hover { background: var(--sky); color: var(--wood); }
+
+/* Shop */
+.shop {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+.shop h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--wood);
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.tab {
+  background: none;
+  border: 1.5px solid var(--wood);
+  color: var(--wood);
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab.active, .tab:hover {
+  background: var(--wood);
+  color: var(--gold-light);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 26px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ECE3D2;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.product-image {
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  background-color: #EFE7D6;
+}
+
+.product-image.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--wood-light), var(--wood));
+}
+
+.product-image.placeholder span {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  color: var(--gold-light);
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-info h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.product-price {
+  color: var(--sky);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.order-btn {
+  display: block;
+  text-align: center;
+  background: var(--wood);
+  color: var(--gold-light);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.order-btn:hover { background: var(--sky); color: var(--wood); }
+
+/* About */
+.about {
+  background: var(--wood);
+  color: var(--cream);
+  padding: 70px 24px;
+}
+
+.about-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  color: var(--gold-light);
+  margin-bottom: 24px;
+  font-size: 1.9rem;
+}
+
+.about p {
+  font-weight: 300;
+  color: #E9DFCE;
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--charcoal);
+  color: #C9BFAD;
+  padding: 50px 24px 20px;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-block h3 {
+  color: var(--gold-light);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.footer-block h4 {
+  color: var(--sky);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.footer-block p { margin: 6px 0; font-size: 0.9rem; }
+
+.footer-block a:hover { color: var(--gold-light); }
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid #3A3025;
+  padding-top: 18px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--wood);
+    flex-direction: column;
+    padding: 10px 24px 20px;
+    display: none;
+    gap: 16px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .main-nav.open { display: flex; }
+  .nav-toggle { display: flex; }
+}
+
+</style>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">JW</span>
+      <span class="brand-name">Junnie's World</span>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="hero-eyebrow">No 18 Challenge, beside Union Bank</p>
+    <h1>Dealer in Quality<br>Male &amp; Female Wears</h1>
+    <p class="hero-sub">Clothes, gadgets and accessories, picked for people who like to look sharp.</p>
+    <div class="hero-actions">
+      <a href="#shop" class="btn btn-gold">Browse the shop</a>
+      <a href="https://api.whatsapp.com/send?phone=2348102385746"
+   class="btn btn-outline">
+   Chat on WhatsApp
+</a>
+    </div>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <h2>Shop</h2>
+  <div class="filter-tabs" id="filterTabs">
+    <button class="tab active" data-filter="all">All</button>
+    <button class="tab" data-filter="clothes">Clothes</button>
+    <button class="tab" data-filter="gadgets">Gadgets</button>
+    <button class="tab" data-filter="accessories">Accessories</button>
+  </div>
+
+  <div class="product-grid" id="productGrid">
+    <!-- Products are injected by script.js -->
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <h2>About Junnie's World</h2>
+    <p>Junnie's World is a small business built around a simple idea: everyone deserves to look and feel good without breaking the bank. We deal in quality clothing, gadgets and accessories for men and women — sourced with care, sold with honesty.</p>
+    <p>Visit us at No 18 Challenge, beside Union Bank, or reach out on WhatsApp — we're happy to help you find exactly what you're looking for.</p>
+  </div>
+</section>
+
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-block">
+      <h3>Junnie's World</h3>
+      <p>Dealer in Quality Male and Female Wears</p>
+    </div>
+    <div class="footer-block">
+      <h4>Contact</h4>
+      <p><a href="tel:08102385746">08102385746</a></p>
+      <p><a href="https://wa.me/2348102385746" target="_blank" rel="noopener">WhatsApp us</a></p>
+      <p>No 18 Challenge, beside Union Bank</p>
+    </div>
+    <div class="footer-block">
+      <h4>Follow</h4>
+      <p><a href="https://facebook.com" target="_blank" rel="noopener">Facebook — Opemipo Alomoge</a></p>
+      <p><a href="https://instagram.com/junniedahcoolest1" target="_blank" rel="noopener">Instagram — @junniedahcoolest1</a></p>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; <span id="year"></span> Junnie's World. All rights reserved.</p>
+</footer>
+<script src="script.js">
+</script>
+</body>
+</html>
